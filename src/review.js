@@ -3,12 +3,12 @@ export function Review(){
         {
             name: "Reviewer 1",
             text: "This product is good.",
-            image: "./person.png" 
+            image: "./person_logo.png" 
         },
         {
             name: "Reviewer 2",
             text: "This product is not great.",
-            image: "./person.png" 
+            image: "./person_logo.png" 
         }
     ];
     return(
