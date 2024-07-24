@@ -20,6 +20,7 @@ export function Product(){
                     <p>Effortlessly access essential ride data with crisp, vibrant details, ensuring you always stay informed</p>
                     <h5>Struggleproof Alloy Wheels</h5>
                     <p>Experience enhanced handling, improved braking, and smoother rides with lightweight alloy wheels, even in unexpected conditions</p>
+                    <h3>₹95,998.00</h3>
                     <Cart/>
                 </div>
             </div>

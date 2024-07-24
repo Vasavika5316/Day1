@@ -1,5 +1,6 @@
 import ReactDOM from "react-dom/client";
 import './styles.css';
+// import { FetchingData } from "./fetchingdata";
 // import {Sum} from './sumfunc.js';
 // import {Details} from './details.js';
 // import {Nest} from './nest.js';
@@ -13,7 +14,13 @@ import './styles.css';
 // import {Incdec} from './incdec.js'
 // import {Cart} from './cart.js'
 // import { Inout } from "./inout";
-import { Product } from "./product";
+// import { Product } from "./product";
+// import { HookUseref } from "./hook_useref";
+// import {Login} from './login.js';
+// import {Tabs} from './tabFunc.js'
+// import {Register} from './register.js'
+// import { LogNReg } from "./lognreg";
+import { ProductList } from "./productlist";
 const rootElement = document.getElementById('root')
 const rootRef = ReactDOM.createRoot(rootElement)
 // rootRef.render(<Sum/>)
@@ -30,4 +37,11 @@ const rootRef = ReactDOM.createRoot(rootElement)
 // rootRef.render(<Incdec/>)
 // rootRef.render(<Cart/>)
 // rootRef.render(<Inout/>)
-rootRef.render(<Product/>)
+// rootRef.render(<Product/>)
+// rootRef.render(<HookUseref/>)
+// rootRef.render(<Login/>)
+// rootRef.render(<Tabs/>)
+// rootRef.render(<Register/>)
+// rootRef.render(<LogNReg/>)
+// rootRef.render(<FetchingData/>)
+rootRef.render(<ProductList/>)
