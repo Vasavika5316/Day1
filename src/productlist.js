@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ProductCard } from "./productcard.js";
 import { Navigation } from "./Navigation.js";
+// import { Navigation } from "./Navigation.js";
 export function ProductList() {
     const [data, setData] = useState([]);
 
@@ -14,8 +15,9 @@ export function ProductList() {
     }, [data]);
     return (
         <div>
+            <Navigation/>
             <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-                <Navigation/>
+                {/* <Navigation/> */}
                 {data.map((dataItem, index) => (
                     <ProductCard
                         key={index}

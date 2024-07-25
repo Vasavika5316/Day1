@@ -1,25 +1,29 @@
-import { useRef,useState,useEffect } from "react";
+import { useRef,useState,useEffect, useContext } from "react";
+import {UserContext} from "./Home.js"
 export function Login(){
     const idRef=useRef(null);
     const pwRef=useRef(null);
     const [status, setStatus] = useState("");
+    const [login,setLogin]=useContext(UserContext);
+    useEffect(() =>{
+        idRef.current.focus();
+    },[]);
     const formSubmitted = (event) =>{
         event.preventDefault();
         if(idRef.current.value === pwRef.current.value){
             setStatus("correct");
+            setLogin(true)
+            console.log(login);
         }else{
             setStatus("incorrect");
         }
         idRef.current.value="";   
         pwRef.current.value=""; 
     }
-    useEffect(() =>{
-        idRef.current.focus();
-    },[]);
     return(
         <div style={{display:"flex",justifyContent:"center",marginTop:"150"}}>
             <div className="card" style={{width:"400",height:"320",padding:"20"}}>
-                <form >
+                <form onSubmit={formSubmitted}>
                     <legend>Login</legend>
                     <p>Provide your details to login</p>
                     <div className="mb-3">
@@ -31,10 +35,10 @@ export function Login(){
                         <input type="password" className="form-control" id="exampleInputPassword1" ref={pwRef} placeholder="Password"/>
                     </div>
                     <div style={{ display:"flex",justifyContent:"flex-end"}}>
-                    <button type="submit" className="btn btn-primary" onClick={formSubmitted} >Login</button>
+                        <button type="submit" className="btn btn-primary"  >Login</button>
                     </div>
-                    </form>
-                    <h1>{status}</h1>
+                </form>
+                <h1>{status}</h1>
             </div>
         </div>
     );

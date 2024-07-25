@@ -137,7 +137,7 @@ export function Register(){
                     <div style={{ display:"flex",justifyContent:"flex-end"}}>
                         <button type="submit" className="btn btn-primary" onClick={onSubmit}>Register</button>
                     </div>
-                    </form>
+                </form>
             </div>
         </div>
     );

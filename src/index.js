@@ -1,8 +1,8 @@
 import ReactDOM from "react-dom/client";
 import './styles.css';
-import { Home } from "./Home";
+// import { Home } from "./Home.js";
 // import { UserAxios } from "./useraxios";
-// import {App} from './App.js'
+import {App} from './App.js'
 // import { FetchingUsingAxios } from "./fetchusing axios";
 // import { FetchingData } from "./fetchingdata";
 // import {Sum} from './sumfunc.js';
@@ -51,5 +51,5 @@ const rootRef = ReactDOM.createRoot(rootElement)
 // rootRef.render(<ProductList/>)
 // rootRef.render(<FetchingUsingAxios/>)
 // rootRef.render(<UserAxios/>)
-// rootRef.render(<App/>)
-rootRef.render(<Home/>)
+rootRef.render(<App/>)
+// rootRef.render(<Home/>)
