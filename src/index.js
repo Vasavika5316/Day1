@@ -1,5 +1,9 @@
 import ReactDOM from "react-dom/client";
 import './styles.css';
+import { Home } from "./Home";
+// import { UserAxios } from "./useraxios";
+// import {App} from './App.js'
+// import { FetchingUsingAxios } from "./fetchusing axios";
 // import { FetchingData } from "./fetchingdata";
 // import {Sum} from './sumfunc.js';
 // import {Details} from './details.js';
@@ -20,7 +24,7 @@ import './styles.css';
 // import {Tabs} from './tabFunc.js'
 // import {Register} from './register.js'
 // import { LogNReg } from "./lognreg";
-import { ProductList } from "./productlist";
+// import { ProductList } from "./productlist";
 const rootElement = document.getElementById('root')
 const rootRef = ReactDOM.createRoot(rootElement)
 // rootRef.render(<Sum/>)
@@ -44,4 +48,8 @@ const rootRef = ReactDOM.createRoot(rootElement)
 // rootRef.render(<Register/>)
 // rootRef.render(<LogNReg/>)
 // rootRef.render(<FetchingData/>)
-rootRef.render(<ProductList/>)
+// rootRef.render(<ProductList/>)
+// rootRef.render(<FetchingUsingAxios/>)
+// rootRef.render(<UserAxios/>)
+// rootRef.render(<App/>)
+rootRef.render(<Home/>)

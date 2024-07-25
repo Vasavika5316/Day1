@@ -1,14 +1,16 @@
 import { Inout } from "./inout";
 import {Cart} from './cart.js'
+import { Navigation } from "./Navigation.js";
 export function Product(){
     return(
         <div>
+            <div><Navigation/></div>
             <div>
                 <h1>Chetak 2901 Electric Scooter by Bajaj Auto - with charger - Ebony Black</h1>
             </div>
             <div style={{display:"flex"}}>
                 <div>
-                    <img src=".\scooty.jpg" alt=""/>
+                    <img src="../scooty.jpg" alt=""/>
                 </div>
                 <div>
                     <h3>Product Description</h3>
