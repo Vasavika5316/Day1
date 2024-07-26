@@ -13,7 +13,7 @@ export function App(){
         <GlobalContext.Provider value={{globalCount,setGlobalCount,globalProfile,setGlobalProfile,globalLogin,setGlobalLogin}}>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Home/>} />
+                    <Route path="/" element={<Home />} />
                     <Route path="/products" element={<ProductList/>} />
                     <Route path="/profile" element={<Profile/>} />
                 </Routes>

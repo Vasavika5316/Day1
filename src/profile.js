@@ -1,18 +1,21 @@
 import { useContext,useState} from "react";
 import { GlobalContext } from "./App";
 import { Navigation } from "./Navigation";
-import { useNavigate } from 'react-router-dom';
+import {Home} from './Home';
 export function Profile(){
     const [showPassword, setShowPassword] = useState(false);
     const {globalProfile}=useContext(GlobalContext);
     const {setGlobalLogin}=useContext(GlobalContext);
-    const navigate = useNavigate();
+    const [isLoggedOut, setIsLoggedOut] = useState(false);
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
     };
     const onLogout = () =>{
         setGlobalLogin(false);
-        navigate('/');
+        setIsLoggedOut(true);
+    }
+    if (isLoggedOut) {
+        return <Home />;
     }
     return (
         <div>

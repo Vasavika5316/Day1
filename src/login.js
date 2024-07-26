@@ -5,6 +5,7 @@ export function Login(){
     const idRef=useRef(null);
     const pwRef=useRef(null);
     const [status, setStatus] = useState("");
+    const {globalProfile}=useContext(GlobalContext);
     // const [login,setLogin]=useContext(UserContext);
     const {setGlobalLogin}=useContext(GlobalContext);
     useEffect(() =>{
@@ -12,7 +13,7 @@ export function Login(){
     },[]);
     const formSubmitted = (event) =>{
         event.preventDefault();
-        if(idRef.current.value === pwRef.current.value){
+        if(idRef.current.value === globalProfile.collegeId && pwRef.current.value === globalProfile.password){
             setStatus("correct");
             setGlobalLogin(true)
             // console.log(login);
