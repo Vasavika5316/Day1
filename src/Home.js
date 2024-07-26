@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 // import {  useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { LogNReg } from "./lognreg";
 import { Navigation } from "./Navigation";
 import { GlobalContext } from "./App";
@@ -16,7 +16,7 @@ export function Home(){
                     <Navigation/>
                     <h1>Welcome to SVES Commerce</h1>
                     {/* <ProductList/> */}
-                    <Link to="/products">Products</Link>
+                    {/* <Link to="/products">Products</Link> */}
                 </div>
             :
                 <div>

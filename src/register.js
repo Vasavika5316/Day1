@@ -6,7 +6,7 @@ export function Register(){
     const [collegeId, setCollegeId] = useState("");
     const [password, setPassword] = useState("");
     const [email, setEmail] = useState("");
-    const [branch, setBranch] = useState("");
+    const [branch, setBranch] = useState(""); 
     const [year, setYear] = useState("");
     const [gender, setGender] = useState("");
     const {setGlobalProfile}=useContext(GlobalContext);

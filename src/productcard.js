@@ -9,7 +9,8 @@ export function ProductCard(props) {
                 {/* <p><strong>Category:</strong> {props.category}</p> */}
                 <p><strong>Price:</strong> ${props.price}</p>
                 <p><strong>Rating:</strong> {props.rating.rate} ({props.rating.count} reviews)</p>
-                <Cart/>
+                <Cart
+                />
             </div>
         </div>
     );
