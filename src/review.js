@@ -15,15 +15,15 @@ export function Review(){
         <div>
             <h1>Reviews</h1>
             {reviews.map((review, index) => (
-                <div className="review-item" key={index}>
+                <div style={{display: "flex",alignItems:"center",marginBottom:"10px"}} key={index}>
                 {review.image && (
                     <img
                         src={review.image}
                         alt="Reviewer"
-                        className="review-img"
+                        style={{width:"50px",height:"50px",marginRight:"20px"}}
                     />
                 )}
-                <div className="review-content">
+                <div style={{display:"flex",flexDirection:"column"}}>
                     <h2>{review.name}</h2>
                     <h3>{review.text}</h3>
                 </div>

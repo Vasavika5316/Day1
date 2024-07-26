@@ -17,6 +17,7 @@ export function Login(){
             setStatus("correct");
             setGlobalLogin(true)
             // console.log(login);
+            localStorage.setItem("name","ReactJS");
         }else{
             setStatus("incorrect");
         }

@@ -1,4 +1,4 @@
-import { useContext,useState} from "react";
+import { useContext,useState,useEffect} from "react";
 import { GlobalContext } from "./App";
 import { Navigation } from "./Navigation";
 import {Home} from './Home';
@@ -7,6 +7,10 @@ export function Profile(){
     const {globalProfile}=useContext(GlobalContext);
     const {setGlobalLogin}=useContext(GlobalContext);
     const [isLoggedOut, setIsLoggedOut] = useState(false);
+    useEffect(()=>{
+        const n=localStorage.getItem("name");
+        console.log(n)
+    })
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
     };
@@ -16,6 +20,7 @@ export function Profile(){
     }
     if (isLoggedOut) {
         return <Home />;
+        // return null;
     }
     return (
         <div>
