@@ -3,19 +3,21 @@ import {BrowserRouter,Routes,Route} from "react-router-dom"
 import { createContext, useState } from "react";
 import {Home} from './Home.js'
 import { ProductList } from "./productlist";
-import { Product } from "./product";
-export const CartContext=createContext();
+import {Profile} from './profile.js';
+export const GlobalContext=createContext();
 export function App(){
     const [globalCount,setGlobalCount]=useState(0);
+    const [globalProfile,setGlobalProfile]=useState({});
+    const [globalLogin,setGlobalLogin]=useState(false);
     return(
-        <CartContext.Provider value={[globalCount,setGlobalCount]}>
+        <GlobalContext.Provider value={{globalCount,setGlobalCount,globalProfile,setGlobalProfile,globalLogin,setGlobalLogin}}>
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<Home/>} />
                     <Route path="/products" element={<ProductList/>} />
-                    <Route path="/product" element={<Product/>} />
+                    <Route path="/profile" element={<Profile/>} />
                 </Routes>
             </BrowserRouter>
-        </CartContext.Provider>
+        </GlobalContext.Provider>
     );
 }

@@ -1,10 +1,12 @@
 import { useRef,useState,useEffect, useContext } from "react";
-import {UserContext} from "./Home.js"
+// import {UserContext} from "./Home.js"
+import { GlobalContext } from "./App";
 export function Login(){
     const idRef=useRef(null);
     const pwRef=useRef(null);
     const [status, setStatus] = useState("");
-    const [login,setLogin]=useContext(UserContext);
+    // const [login,setLogin]=useContext(UserContext);
+    const {setGlobalLogin}=useContext(GlobalContext);
     useEffect(() =>{
         idRef.current.focus();
     },[]);
@@ -12,8 +14,8 @@ export function Login(){
         event.preventDefault();
         if(idRef.current.value === pwRef.current.value){
             setStatus("correct");
-            setLogin(true)
-            console.log(login);
+            setGlobalLogin(true)
+            // console.log(login);
         }else{
             setStatus("incorrect");
         }

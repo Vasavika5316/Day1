@@ -1,8 +1,8 @@
 import { useEffect,useState } from "react";
 import { useContext } from "react";
-import {CartContext} from "./App.js"
+import {GlobalContext} from "./App.js"
 export function Cart(){
-    const [globalCount,setGlobalCount]=useContext(CartContext);
+    const {globalCount,setGlobalCount}=useContext(GlobalContext);
     const [count,setCount]=useState(0);
     useEffect(()=>{
         console.log("Use effect is called");

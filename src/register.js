@@ -1,13 +1,15 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { GlobalContext } from "./App";
 // import { useRef,useEffect } from "react";
 export function Register(){
-    // const [details,setDetails]=useState("")
+    const [details,setDetails]=useState([])
     const [collegeId, setCollegeId] = useState("");
     const [password, setPassword] = useState("");
     const [email, setEmail] = useState("");
     const [branch, setBranch] = useState("");
     const [year, setYear] = useState("");
     const [gender, setGender] = useState("");
+    const {setGlobalProfile}=useContext(GlobalContext);
     const getCollegeId = (event) => {
         setCollegeId(event.target.value);
         console.log(event.target.value);
@@ -35,9 +37,10 @@ export function Register(){
     const onSubmit = (event) =>{
         event.preventDefault();
         const data={collegeId,password,email,branch,year,gender}
-        console.log(data)
-        // setDetails(data)
-        // console.log(details)
+        // console.log(data);
+        setDetails(data);
+        setGlobalProfile(data);
+        console.log(details);
         setCollegeId("");
         setPassword("");
         setEmail("");        

@@ -1,17 +1,19 @@
-import React from "react";
-import { createContext, useState } from "react";
+import React, { useContext } from "react";
+// import {  useState } from "react";
 import { Link } from "react-router-dom";
 import { LogNReg } from "./lognreg";
 import { Navigation } from "./Navigation";
-export const UserContext=createContext();
+import { GlobalContext } from "./App";
+// export const UserContext=createContext();
 export function Home(){
-    const [login,setLogin]=useState(false);
+    // const [login,setLogin]=useState(false);
+    const {globalLogin}=useContext(GlobalContext);
     return(
-        <UserContext.Provider value={[login,setLogin]}>
+        // <UserContext.Provider value={[login,setLogin]}>
         <div>
-            <Navigation/>
-            {login?
-                <div>
+            {globalLogin?
+                <div> 
+                    <Navigation/>
                     <h1>Welcome to SVES Commerce</h1>
                     {/* <ProductList/> */}
                     <Link to="/products">Products</Link>
@@ -21,6 +23,6 @@ export function Home(){
                     <LogNReg/>
                 </div>}
         </div>
-        </UserContext.Provider>
+        // </UserContext.Provider>
     );
 }

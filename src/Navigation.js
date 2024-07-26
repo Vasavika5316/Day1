@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
-import {CartContext} from "./App.js"
+import {GlobalContext} from "./App.js"
 export function Navigation(){
-    const [globalCount]=useContext(CartContext);
+    const {globalCount}=useContext(GlobalContext);
     return(
         // <div>
         //     <Link to="/" >Home</Link>
